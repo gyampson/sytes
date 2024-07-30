@@ -12,17 +12,6 @@ import SettingsScreen from "./component/SettingsScreen";
 import PersonalScreen from "./component/PersonalScreen";
 import ProfileScreen from "./component/ProfileScreen";
 import HomeScreen from "./component/HomeScreen";
-const lightTheme = {
-  backgroundColor: "#fff",
-  textColor: "#000",
-  // ... other styles
-};
-
-const darkTheme = {
-  backgroundColor: "#222",
-  textColor: "#fff",
-  // ... other styles
-};
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,28 +23,10 @@ export default function App() {
   if (!fontsLoaded) {
     return <Text>Loading...</Text>;
   }
-  // const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // useEffect(() => {
-  //   const savedTheme = localStorage.getItem("theme");
-  //   if (savedTheme) {
-  //     setIsDarkMode(savedTheme === "dark");
-  //   } else {
-  //     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-  //     setIsDarkMode(prefersDark.matches);
-  //   }
-  // }, []);
-
-  // const toggleTheme = () => {
-  //   setIsDarkMode(!isDarkMode);
-  //   localStorage.setItem("theme", isDarkMode ? "light" : "dark");
-  // };
-
-  // const theme = isDarkMode ? darkTheme : lightTheme;
   return (
     <View style={styles.container}>
       <HomeScreen />
-      {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
     </View>
   );
 }

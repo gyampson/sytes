@@ -57,56 +57,57 @@ const HomeScreen = () => {
         },
       ]}
     >
-      <ScrollView horizontal={false} showsHorizontalScrollIndicator={false}>
-        <Router>
-          <View style={styles.nav}>
-            <TouchableOpacity onPress={toggleTheme}>
-              <Image
-                source={require("../assets/darkmode.png")}
-                style={styles.darkmode}
-              />
-            </TouchableOpacity>
-            <Link to="/PersonalScreen" style={styles.nav1}>
-              <Image
-                source={require("../assets/personal.png")}
-                style={styles.img}
-              />
-              Personal Details
-            </Link>
+      <Router>
+        <TouchableOpacity style={styles.nav}>
+          <TouchableOpacity onPress={toggleTheme}>
+            <Image
+              source={require("../assets/darkmode.png")}
+              style={styles.darkmode}
+            />
+          </TouchableOpacity>
+          <Link to="/PersonalScreen" style={styles.nav1}>
+            <Image
+              source={require("../assets/personal.png")}
+              style={styles.img}
+            />
+            Personal Details
+          </Link>
 
-            <Link to="/ProfileScreen" style={styles.nav1}>
-              <Image
-                source={require("../assets/Profile.png")}
-                style={styles.img}
-              />
-              Profile
-            </Link>
+          <Link to="/ProfileScreen" style={styles.nav1}>
+            <Image
+              source={require("../assets/Profile.png")}
+              style={styles.img}
+            />
+            Profile
+          </Link>
 
-            <Link to="/SettingsScreen" style={styles.nav1}>
-              <Image
-                source={require("../assets/settings.png")}
-                style={styles.img}
-              />
-              Settings
-            </Link>
+          <Link to="/SettingsScreen" style={styles.nav1}>
+            <Image
+              source={require("../assets/settings.png")}
+              style={styles.img}
+            />
+            Settings
+          </Link>
 
-            <Link to="/myDrawer " style={styles.nav1}>
-              <Image
-                source={require("../assets/Home.png")}
-                style={styles.img}
-              />
-              Home
-            </Link>
-          </View>
-          <Routes>
-            <Route path="/PersonalScreen" element={<PersonalScreen />} />
+          <Link to="/myDrawer " style={styles.nav1}>
+            <Image source={require("../assets/Home.png")} style={styles.img} />
+            Home
+          </Link>
+          <TouchableOpacity style={styles.samson1}>
+            <Image
+              source={require("../assets/samson.jpg")}
+              style={styles.samson}
+            />
+          </TouchableOpacity>
+        </TouchableOpacity>
+        <Routes>
+          <Route path="/PersonalScreen" element={<PersonalScreen />} />
 
-            <Route path="/ProfileScreen" element={<ProfileScreen />} />
-            <Route path="/SettingsScreen" element={<SettingsScreen />} />
-            <Route path="/myDrawer" element={<MyDrawer />} />
-          </Routes>
-        </Router>
-      </ScrollView>
+          <Route path="/ProfileScreen" element={<ProfileScreen />} />
+          <Route path="/SettingsScreen" element={<SettingsScreen />} />
+          <Route path="/myDrawer" element={<MyDrawer />} />
+        </Routes>
+      </Router>
     </View>
   );
 };
@@ -156,4 +157,16 @@ const styles = StyleSheet.create({
     height: 25,
     resizeMode: "contain",
   },
+  samson: {
+    width: 50,
+    height: 50,
+    borderColor: "yellow",
+    borderStyle: "solid",
+    backgroundColor: "white",
+
+    right: 600,
+    resizeMode: "cover",
+    borderRadius: 30,
+  },
+  samson1: {},
 });

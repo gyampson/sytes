@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ImageBackground } from "react-native";
 import React, { useState, useEffect } from "react";
 const lightTheme = {
   backgroundColor: "#222",
@@ -7,7 +7,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  backgroundColor: "red",
+  backgroundColor: "#BD9C6C",
   textColor: "#fff",
   // ... other styles
 };
