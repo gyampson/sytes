@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import video from "../assets/video.mp4";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 const lightTheme = {
   backgroundColor: "#222",
   textColor: "#000",
@@ -97,6 +98,77 @@ const myDrawer = () => {
             />
           </TouchableOpacity>
         </View>
+        <ImageBackground
+          source={require("../assets/back.jpg")}
+          style={styles.contact1}
+        ></ImageBackground>
+        <View style={styles.contact}>
+          <Text style={styles.contact3}>CONTACT ME</Text>
+          <Text style={styles.contact4}>Phone and Email</Text>
+          <Image
+            source={require("../assets/phone.png")}
+            style={styles.footer}
+          />
+          <Text style={styles.footers}> +233 551 957 522 </Text>
+          <Image
+            source={require("../assets/message.png")}
+            style={styles.footer}
+          />
+          <Text style={styles.footers}>sgyampoh005@st.ug.edu.gh</Text>
+          <TouchableOpacity style={styles.footer1}>
+            <Link to="https://web.whatsapp.com" style={styles.footer3}>
+              <Image
+                source={require("../assets/whatsapp.jpeg")}
+                style={styles.footer2}
+              />
+            </Link>
+            <Link to="https://github.com/gyampson" style={styles.footer3}>
+              <Image
+                source={require("../assets/github.jpeg")}
+                style={styles.footer2}
+              />
+            </Link>
+            <Link
+              to="https://www.linkedin.com/in/samson-gyampoh-6921b7313/"
+              style={styles.footer3}
+            >
+              <Image
+                source={require("../assets/linkedin.png")}
+                style={styles.footer2}
+              />
+            </Link>
+            <Link to="https://x.com/GyampohSam54898" style={styles.footer3}>
+              <Image
+                source={require("../assets/twitter.png")}
+                style={styles.footer2}
+              />
+            </Link>
+            <Link
+              to="https://www.instagram.com/sam_mysg/"
+              style={styles.footer3}
+            >
+              <Image
+                source={require("../assets/instagram.jpeg")}
+                style={styles.footer2}
+              />
+            </Link>
+            <Link
+              to="https://web.facebook.com/samson.kwaku.142/"
+              style={styles.footer3}
+            >
+              <Image
+                source={require("../assets/facebook.png")}
+                style={styles.footer2}
+              />
+            </Link>
+            <Link to="https://web.snapchat.com/" style={styles.footer3}>
+              <Image
+                source={require("../assets/snapchat.png")}
+                style={styles.footer2}
+              />
+            </Link>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -136,6 +208,7 @@ const styles = StyleSheet.create({
   },
   back2: {
     alignItems: "center",
+    backgroundColor: "transparent",
   },
   icons: {
     width: 150,
@@ -155,5 +228,61 @@ const styles = StyleSheet.create({
   },
   port: {
     flexDirection: "row",
+  },
+  contact: {
+    backgroundColor: "#1B1B31",
+    width: "70%",
+    height: "40%",
+    alignItems: "center",
+    bottom: 200,
+    left: 200,
+  },
+  contact1: {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    backgroundColor: "#1B1B31",
+    opacity: 0.7,
+    zIndex: -1,
+  },
+  contact3: {
+    fontSize: 30,
+    fontFamily: "font3",
+    fontWeight: "bold",
+    color: "white",
+  },
+  contact4: {
+    fontSize: 25,
+    fontFamily: "font3",
+    fontWeight: "bold",
+    color: "white",
+  },
+  footer: {
+    tintColor: "white",
+    width: 25,
+    height: 25,
+    top: 10,
+    resizeMode: "contain",
+  },
+  footer1: {
+    flexDirection: "row",
+    top: 200,
+  },
+  footer2: {
+    marginLeft: 20,
+    width: 25,
+    height: 25,
+    resizeMode: "cover",
+    borderRadius: 15,
+  },
+  footers: {
+    fontSize: 15,
+    color: "white",
+    marginTop: 10,
+    fontFamily: "font3",
+    fontWeight: "bold",
+    marginLeft: 10,
+    left: 120,
+    bottom: 25,
   },
 });

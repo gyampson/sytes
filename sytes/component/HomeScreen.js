@@ -18,7 +18,7 @@ const lightTheme = {
 };
 
 const darkTheme = {
-  backgroundColor: "#1B1B31",
+  backgroundColor: "grey",
   textColor: "#fff",
   // ... other styles
 };
@@ -70,7 +70,7 @@ const HomeScreen = () => {
               source={require("../assets/personal.png")}
               style={styles.img}
             />
-            Personal Details
+            Personal
           </Link>
 
           <Link to="/ProfileScreen" style={styles.nav1}>
@@ -98,6 +98,7 @@ const HomeScreen = () => {
               source={require("../assets/samson.jpg")}
               style={styles.samson}
             />
+            <Text style={styles.txt}>SAMSON GYAMPOH </Text>
           </TouchableOpacity>
         </TouchableOpacity>
         <Routes>
@@ -126,13 +127,11 @@ const styles = StyleSheet.create({
     fontFamily: "font2",
   },
   nav1: {
-    marginTop: 0,
-    marginBottom: 0,
     marginLeft: 50,
     fontSize: 20,
-    color: "blue",
-    textDecorationLine: "none",
-    fontWeight: "condensed",
+    color: "black",
+
+    fontWeight: "light",
     fontFamily: "font2",
   },
 
@@ -149,7 +148,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     top: 25,
     right: 30,
-    tintColor: "red",
+    tintColor: "white",
   },
   header: {},
   darkmode: {
@@ -158,8 +157,8 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   samson: {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
     borderColor: "yellow",
     borderStyle: "solid",
     backgroundColor: "white",
@@ -168,5 +167,12 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     borderRadius: 30,
   },
-  samson1: {},
+  txt: {
+    fontSize: 15,
+    fontWeight: "bold",
+    color: "black",
+
+    right: 600,
+    fontFamily: "font2",
+  },
 });
