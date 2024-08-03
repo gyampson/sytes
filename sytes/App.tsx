@@ -12,6 +12,7 @@ import SettingsScreen from "./component/SettingsScreen";
 import PersonalScreen from "./component/PersonalScreen";
 import ProfileScreen from "./component/ProfileScreen";
 import HomeScreen from "./component/HomeScreen";
+import MyDrawer from "./component/myDrawer";
 
 export default function App() {
   const [fontsLoaded] = useFonts({

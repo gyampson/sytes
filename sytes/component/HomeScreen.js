@@ -109,6 +109,19 @@ const HomeScreen = () => {
           <Route path="/myDrawer" element={<MyDrawer />} />
         </Routes>
       </Router>
+      <View>
+        <TouchableOpacity style={styles.samson2}>
+          <Text style={styles.txt1}>
+            Samson Gyampoh, a 28-year-old software engineer from Indonesia, is
+            passionate about his work and loves solving complex problems. He
+            recently graduated from university with a degree in Computer Science
+            and has worked in various industries such as tech, healthcare, and
+            finance. He is eager to learn more about the field and share his
+            knowledge with others. Samson is a friendly, outgoing, and
+            detail-oriented individual who is always ready to help others.
+          </Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -119,7 +132,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#1B1B31",
-    paddingTop: 20,
+
     width: "100%",
   },
   header1: {
